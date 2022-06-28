@@ -36,8 +36,8 @@
                 <a class="nav-link" [routerLink]="['contact']">Contact</a>
               </li>
               <li class="search-bar ml-lg-3 mr-lg-5 mt-lg-0 mt-4">
-                <!--/search-right-->
-                <form class="search position-relative">
+                <!-- /search-right-->
+                <!-- <form class="search position-relative">
                   <input
                     type="search"
                     class="search__input"
@@ -47,9 +47,9 @@
                     required=""
                   />
                   <span class="fas fa-search search__icon"></span>
-                </form>
+                </form> -->
 
-                <!--//search-right-->
+                <!--//search-right -->
               </li>
             </ul>
           </div>
@@ -85,7 +85,7 @@
             >
           </h4>
           <div class="main-social-footer-29 mt-4 mb-lg-5 mb-4">
-            <a href="#facebook" class="facebook"
+            <!-- <a href="#facebook" class="facebook"
               ><span class="fab fa-facebook-f"></span
             ></a>
             <a href="#twitter" class="twitter"
@@ -93,8 +93,12 @@
             ></a>
             <a href="#instagram" class="instagram"
               ><span class="fab fa-instagram"></span
+            ></a> -->
+            <a href="https://www.upwork.com/freelancers/~01f2c38d3795ab3e22" target="_blank" class="linkedin"
+              ><span class="fab" style="font-weight: 900;
+              font-family: monospace;">Up</span
             ></a>
-            <a href="#linkedin" class="linkedin"
+            <a href="https://www.linkedin.com/in/qodist-softwares-llp-7b5752243" target="_blank" class="linkedin"
               ><span class="fab fa-linkedin-in"></span
             ></a>
           </div>
@@ -104,17 +108,15 @@
     <!-- //footer -->
     <!-- copyright -->
     <section class="w3l-copyright">
-      <div class="container">
+      <div class="container" style="display: flex;
+      justify-content: center;">
         <div class="row bottom-copies">
-          <p class="col-lg-8 copy-footer-29">
-            © 2020 Seog. All rights reserved. Design by
-            <a href="https://w3layouts.com/" target="_blank"> W3Layouts</a>
-          </p>
-          <div class="col-lg-4 footer-list-29">
+
+          <div class="footer-list-29">
             <ul class="d-flex text-lg-right">
-              <li><a href="#careers"> Careers</a></li>
+              <li><a [routerLink]="['about-us']"> About us</a></li>
               <li class="mx-lg-5 mx-md-4 mx-3">
-                <a href="#privacymy-lg-0 my-4">Privacy Policy</a>
+                <a [routerLink]="['services']">Services</a>
               </li>
               <li><a [routerLink]="['contact']">Contact Us</a></li>
             </ul>
