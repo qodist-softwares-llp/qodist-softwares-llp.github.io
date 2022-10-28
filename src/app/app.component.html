@@ -49,7 +49,7 @@
                   <span class="fas fa-search search__icon"></span>
                 </form> -->
 
-                <!--//search-right-->
+                <!--//search-right -->
               </li>
             </ul>
           </div>
@@ -58,7 +58,7 @@
             <nav class="navigation">
               <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
-                  <input type="checkbox" id="checkbox" />
+                  <input type="checkbox" id="checkbox" [(ngModel)]="isDarkThemeSelected" (change)="switchTheme($event)" />
                   <div class="mode-container">
                     <i class="gg-sun"></i>
                     <i class="gg-moon"></i>
@@ -93,8 +93,12 @@
             ></a>
             <a href="#instagram" class="instagram"
               ><span class="fab fa-instagram"></span
+            ></a> -->
+            <a href="https://www.upwork.com/freelancers/~01f2c38d3795ab3e22" target="_blank" class="linkedin"
+              ><span class="fab" style="font-weight: 900;
+              font-family: monospace;">Up</span
             ></a>
-            <a href="#linkedin" class="linkedin"
+            <a href="https://www.linkedin.com/in/qodist-softwares-llp-7b5752243" target="_blank" class="linkedin"
               ><span class="fab fa-linkedin-in"></span
             ></a>
           </div> -->
@@ -104,16 +108,17 @@
     <!-- //footer -->
     <!-- copyright -->
     <section class="w3l-copyright">
-      <div class="container">
+      <div class="container" style="display: flex;
+      justify-content: center;">
         <div class="row bottom-copies">
           <p class="col-lg-8 copy-footer-29">
             © 2022 Qodist. All rights reserved.
           </p>
           <!-- <div class="col-lg-4 footer-list-29">
             <ul class="d-flex text-lg-right">
-              <li><a href="#careers"> Careers</a></li>
+              <li><a [routerLink]="['about-us']"> About us</a></li>
               <li class="mx-lg-5 mx-md-4 mx-3">
-                <a href="#privacymy-lg-0 my-4">Privacy Policy</a>
+                <a [routerLink]="['services']">Services</a>
               </li>
               <li><a [routerLink]="['contact']">Contact Us</a></li>
             </ul>
