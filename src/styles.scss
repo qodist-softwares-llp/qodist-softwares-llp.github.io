@@ -1,21 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  /* Override core branding colors to a modern indigo-blue tech theme */
-  --primary-color: #4f46e5; /* Indigo 600 */
-  --primary-dark: #3730a3; /* Indigo 800 */
-  --secondary-color: #0ea5e9; /* Sky 500 */
-  --secondary-dark: #0284c7; /* Sky 600 */
+  /* Override core branding colors to match favicon.ico gradient (Blue to Purple) */
+  --primary-color: #6914f9; /* Violet/Purple (Gradient End) */
+  --primary-dark: #520ad4; /* Darker Violet */
+  --secondary-color: #1c7fff; /* Electric Blue (Gradient Start) */
+  --secondary-dark: #0062df; /* Darker Blue */
   --third-color: #10b981; /* Emerald 500 */
   
   --font-color: #475569; /* Slate 600 */
   --bg-color: #f8fafc; /* Slate 50 */
   --heading-color: #0f172a; /* Slate 900 */
   --border-color-light: #e2e8f0; /* Slate 200 */
-  --bg-light: rgba(79, 70, 229, 0.04);
+  --bg-light: rgba(105, 20, 249, 0.04); /* Light Violet Accent */
   --bg-grey: #f1f5f9; /* Slate 100 */
   --card-bg: #ffffff;
   --footer-bg: #0f172a;
+
+  /* Gradient variable */
+  --primary-gradient: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
 
   /* Spacing and borders */
   --border-radius: 12px;
@@ -28,10 +31,10 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #6366f1; /* Indigo 500 */
-  --primary-dark: #818cf8; /* Indigo 400 */
-  --secondary-color: #38bdf8; /* Sky 400 */
-  --secondary-dark: #0ea5e9; /* Sky 500 */
+  --primary-color: #8c4bfa; /* Slightly lighter violet/purple for dark mode contrast */
+  --primary-dark: #a770ff;
+  --secondary-color: #3b8cff; /* Slightly lighter blue for dark mode contrast */
+  --secondary-dark: #60a5fa;
   --third-color: #34d399; /* Emerald 400 */
   
   --font-color: #94a3b8; /* Slate 400 */
@@ -41,7 +44,7 @@
   --border-color-light: rgba(255, 255, 255, 0.08);
   --nav-color: #fff;
   --dropdown-color: #0f172a;
-  --bg-light: #151c2c;
+  --bg-light: rgba(140, 75, 250, 0.08);
   --bg-grey: #0b0f19;
   --card-bg: #111827;
   --footer-bg: #070a0f;
@@ -69,18 +72,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 600 !important;
   letter-spacing: -0.01em;
   border-radius: 8px !important; /* Premium rounded */
-  background: var(--primary-color) !important;
-  border: 1.5px solid var(--primary-color) !important;
+  background: var(--primary-gradient) !important;
+  border: none !important;
   color: #fff !important;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15) !important;
+  box-shadow: 0 4px 14px rgba(105, 20, 249, 0.25) !important;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transform: translateY(0);
 }
 
 .btn.btn-style:hover {
-  background: var(--primary-dark) !important;
-  border-color: var(--primary-dark) !important;
-  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25) !important;
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--primary-dark) 100%) !important;
+  box-shadow: 0 6px 20px rgba(105, 20, 249, 0.35) !important;
   transform: translateY(-2px);
 }
 
@@ -179,7 +181,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Plus Jakarta Sans', sans-serif !important;
   color: #fff !important;
   font-weight: 700 !important;
-  background: linear-gradient(135deg, #a5b4fc, #6366f1) !important;
+  background: var(--primary-gradient) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   font-size: 32px !important;
@@ -274,21 +276,21 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .form-input input:focus, .form-input textarea:focus {
   border-color: var(--primary-color) !important;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(105, 20, 249, 0.15) !important;
   outline: none !important;
 }
 
 /* Banner gradient backgrounds */
 .w3l-banner-content {
   position: relative;
-  background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.06) 0%, transparent 40%),
+  background: radial-gradient(circle at 10% 20%, rgba(105, 20, 249, 0.06) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(28, 127, 255, 0.06) 0%, transparent 40%),
               var(--bg-color) !important;
   border-bottom: 1px solid var(--border-color-light);
 }
 
 .breadcrumb-bg {
-  background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+  background: radial-gradient(circle at 10% 20%, rgba(105, 20, 249, 0.08) 0%, transparent 45%),
               var(--footer-bg) !important;
 }
 
@@ -465,6 +467,26 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   border-radius: var(--border-radius) !important;
   border: 1px solid var(--border-color-light) !important;
   box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Custom Navigation Logo & Gradient Text Highlights */
+.logo-img {
+  height: 40px !important;
+  max-width: 160px !important;
+  width: auto !important;
+  vertical-align: middle !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.logo-img:hover {
+  opacity: 0.85 !important;
+}
+
+span.w3sub-color {
+  background: var(--primary-gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
 }
 
 
